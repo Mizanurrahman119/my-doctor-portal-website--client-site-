@@ -7,37 +7,43 @@ const bookings = [
         id:1,
         name: 'Teath Orthidonics',
         time:'08.00 AM - 09.00 AM',
-        space: 10
+        space: 10,
+        price: 15,
     },
     {
         id:2,
         name: 'Cosmetic Dentistry',
         time:'09.00 AM - 10.00 AM',
-        space: 9
+        space: 9,
+        price: 10,
     },
     {
         id:3,
         name: 'Teath Cleaning',
         time:'10.00 AM - 11.00 AM',
-        space: 6
+        space: 6,
+        price: 15,
     },
     {
         id:4,
         name: 'Cavity Protection',
         time:'12.00 PM - 01.00 PM',
-        space: 8
+        space: 8,
+        price: 25,
     },
     {
         id:5,
         name: 'Pediatric Dental',
         time:'01.00 PM - 02.00 PM',
-        space: 5
+        space: 5,
+        price: 30,
     },
     {
         id:6,
         name: 'Oral Surgery',
         time:'03.00 PM - 04.00 PM',
-        space: 10
+        space: 10,
+        price: 15,
     },
 ]
 

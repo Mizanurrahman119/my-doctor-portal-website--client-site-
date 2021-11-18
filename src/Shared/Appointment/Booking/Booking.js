@@ -5,7 +5,7 @@ import BookingModal from '../BookingModal/BookingModal';
 
 
 const Booking = ({booking, date, setBookingSuccess}) => {
-    const {name, time, space} = booking;
+    const {name,price, time, space} = booking;
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
@@ -15,6 +15,10 @@ const Booking = ({booking, date, setBookingSuccess}) => {
             <Paper sx={{py:4, my: 1}}>
                 <Typography style={{color: "#24DEDA", fontWeight:500}} variant="h5" gutterBottom component= "div">
                     {name}
+                </Typography>
+                <Typography 
+                sx={{fontSize: '16px',fontWeight:'900'}} variant="h6" gutterBottom component= "div">
+                   Price: ${price}
                 </Typography>
                 <Typography variant="h6" gutterBottom component= "div">
                     {time}

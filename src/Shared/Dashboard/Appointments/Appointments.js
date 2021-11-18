@@ -7,6 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const Appointments = ({date}) => {
@@ -25,15 +27,16 @@ const Appointments = ({date}) => {
     },[date, user.email, token])
 
     return (
-        <div>
+        <div sx={{width:'90%'}}>
             <h2>Appointments: {appointments.length}</h2>
             <TableContainer component={Paper}>
-      <Table sx={{ }} aria-label="Appointments table">
+      <Table aria-label="Appointments table">
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
             <TableCell align="center">Time</TableCell>
             <TableCell align="center">Services</TableCell>
+            <TableCell align="center">Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -47,7 +50,7 @@ const Appointments = ({date}) => {
               </TableCell>
               <TableCell align="center">{row.time}</TableCell>
               <TableCell align="center">{row.serviceName}</TableCell>
-              <TableCell align="rcenter">{row.fat}</TableCell>
+              <TableCell align="center">{row.payment ? 'paid' : <Link to={`/dashboard/payment/${row._id}`} style={{textDecoration: 'none'}}><Button style={{backgroundColor: "#24DEDA", color:'white'}}>Pay</Button></Link>}</TableCell>
             </TableRow>
           ))}
         </TableBody>
